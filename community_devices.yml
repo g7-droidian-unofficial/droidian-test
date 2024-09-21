@@ -1,0 +1,73 @@
+########################################################################
+# Basic anchors                                                        #
+########################################################################
+
+.generic_api30_packages:
+  packages: &generic_api30_packages
+    - adaptation-hybris-api30-phone
+    - droidian-devtools
+    - adaptation-hybris-devtools
+
+.generic_api29_packages:
+  packages: &generic_api29_packages
+    - adaptation-hybris-api29-phone
+    - droidian-devtools
+    - adaptation-hybris-devtools
+
+.generic_api28_packages:
+  packages: &generic_api28_packages
+    - adaptation-hybris-api28-phone
+    - droidian-devtools
+    - adaptation-hybris-devtools
+
+.adaptation_generic_packages:
+  packages: &adaptation_generic_packages
+    - droidian-devtools
+    - adaptation-hybris-devtools
+
+########################################################################
+# Device specific images                                               #
+########################################################################
+
+#
+# Generic images
+#
+
+rootfs:
+  type: rootfs
+  arch: [armhf, arm64]
+  edition: phosh
+  variant: phone
+  apilevel: [28, 29, 30]
+
+  packages: *adaptation_generic_packages
+
+# API30 (no kernel)
+generic_api30:
+  type: image
+  arch: arm64
+  edition: phosh
+  variant: phone
+  apilevel: 30
+
+  packages: *generic_api30_packages
+
+# API29 (no kernel)
+generic_api29:
+  type: image
+  arch: arm64
+  edition: phosh
+  variant: phone
+  apilevel: 29
+
+  packages: *generic_api29_packages
+
+# API28 (no kernel)
+generic_api28:
+  type: image
+  arch: arm64
+  edition: phosh
+  variant: phone
+  apilevel: 28
+
+  packages: *generic_api28_packages
