@@ -1,0 +1,81 @@
+########################################################################
+# Basic anchors                                                        #
+########################################################################
+
+.oneplus_oneplus3_packages:
+  packages: &oneplus_oneplus3_packages
+    - adaptation-droidian-oneplus3
+    - adaptation-oneplus3-configs
+
+.devtools_packages:
+  packages: &devtools_packages
+    - droidian-devtools
+    - adaptation-hybris-devtools
+
+.adaptation_generic_packages:
+  packages: &adaptation_generic_packages
+    - adaptation-android-generic
+
+.fxtec_pro1_packages:
+  packages: &fxtec_pro1_packages
+    - adaptation-fxtec-pro1
+    - adaptation-fxtec-pro1-configs
+
+.fxtec_pro1x_packages:
+  packages: &fxtec_pro1x_packages
+    - adaptation-fxtec-pro1x
+    - adaptation-fxtec-pro1x-configs
+
+.google_sargo_packages:
+  packages: &google_sargo_packages
+    - adaptation-google-sargo
+    - adaptation-google-sargo-configs
+
+.lenovo_bronco_packages:
+  packages: &lenovo_bronco_packages
+    - adaptation-lenovo-bronco
+    - adaptation-lenovo-bronco-configs
+    - ofono-ril-plugin
+
+.sony_bahamut_packages:
+  packages: &sony_bahamut_packages
+    - adaptation-sony-bahamut
+    - adaptation-sony-bahamut-configs
+
+.volla_mimameid_packages:
+  packages: &volla_mimameid_packages
+    - adaptation-volla-mimameid
+    - adaptation-volla-mimameid-configs
+
+.volla_yggdrasil_packages:
+  packages: &volla_yggdrasil_packages
+    - adaptation-volla-yggdrasil
+    - adaptation-volla-yggdrasil-configs
+
+.xiaomi_miatoll_packages:
+  packages: &xiaomi_miatoll_packages
+    - adaptation-xiaomi-miatoll
+    - adaptation-miatoll-configs
+
+########################################################################
+# Recovery-flashable rootfses                                          #
+########################################################################
+
+########################################################################
+# Device specific images                                               #
+########################################################################
+
+
+#
+# OnePlus
+#
+
+# OnePlus 3/3T (oneplus3)
+oneplus_oneplus3:
+  type: image
+  arch: arm64
+  edition: phosh
+  variant: phone
+  apilevel: 28
+
+  packages: *oneplus_oneplus3_packages
