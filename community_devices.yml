@@ -6,6 +6,9 @@
   packages: &oneplus_oneplus3_packages
     - adaptation-droidian-oneplus3
     - adaptation-oneplus3-configs
+    - droidian-devtools
+    - adaptation-hybris-devtools
+
 
 .devtools_packages:
   packages: &devtools_packages
